@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_change_image"
+        style="@style/results_assessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Choose" />
+
+    <View
+        android:id="@+id/view_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_change_image"
+        android:layout_marginTop="17dp"
+        android:background="#E7E7E7" />
+
+    <LinearLayout
+        android:id="@+id/ll_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_seperator"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_parent_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_gallery"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_backround_oval">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/gallery_icon" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/StudentProfileLabelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_gallery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12sp"
+                android:text="Gallery" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_parent_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_camera"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_backround_oval">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/document" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/StudentProfileLabelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_camera"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="Document" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_seperator_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_choose"
+        android:layout_marginBottom="27dp"
+        android:layout_marginTop="30dp"
+        android:background="#E7E7E7" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/StudentProfileLabelsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_seperator_bottom"
+        android:layout_centerHorizontal="true"
+        android:text="Cancel" />
+
+</RelativeLayout>

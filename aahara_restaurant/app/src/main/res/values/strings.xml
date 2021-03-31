@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">aahara_restaurant</string>
+    <string name="sign_text">Sign in to start your session</string>
+    <string name="forgot_text">I forgot my password</string>
+    <string name="sales_text">Saless In Last 2 Weeks</string>
+    <string name="navigation_drawer_open">Left Navigation  open</string>
+    <string name="navigation_drawer_close">Left Navigation  Close</string>
+    <string name="copy_write">Copyright &#169; 2020</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="something_unexpected">Something unexpected has happened</string>
+
+
+</resources>

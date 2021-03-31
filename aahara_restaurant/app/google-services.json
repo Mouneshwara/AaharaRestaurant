@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "346759533475",
+    "project_id": "restaurantaahara-2104f",
+    "storage_bucket": "restaurantaahara-2104f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346759533475:android:d66ccf0e7d870f3e744016",
+        "android_client_info": {
+          "package_name": "com.codebele.aahara_restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346759533475-mpi5a5qunimlbrmfbj425o770rhh100d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnGKIcAe7-ih9x-_CL6d06RNoyDQg9dFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346759533475-mpi5a5qunimlbrmfbj425o770rhh100d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

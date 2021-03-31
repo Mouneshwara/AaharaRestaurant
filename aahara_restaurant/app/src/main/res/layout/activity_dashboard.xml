@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    android:orientation="vertical"
+    tools:context=".dashboard.DashboardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id= "@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="50dp">
+
+<!--
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/email_bg"
+            android:drawableRight="@drawable/ic_baseline_search"
+            android:hint="Search"
+            android:textSize="14sp"
+            android:padding="5dp" />
+-->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+
+    <TextView
+        android:id="@+id/tv_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar"
+        android:text="Dashboard"
+        android:textColor="#343a40"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_dasboardHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dashboard"
+        >
+
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Home"
+            android:textColor="#007bff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_forwardslsh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_home"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="/"
+            android:textColor="#6c757d"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_forwardslsh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Dashboard"
+            android:textColor="#6c757d"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dashboardcards"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/ll_dasboardHome"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/dasboard_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_noOfOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_noOfOrders"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="New Orders"
+                android:textColor="@color/white" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/dasboard_trnsparent"
+                android:layout_alignParentBottom="true">
+
+               <!-- <TextView
+                    android:id="@+id/tv_moreOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0000001A"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="More info"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_moreOrders"
+                    android:background="@drawable/circle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_blue"/>
+-->
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/dasboard_delivery_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_noOfDeliverys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_Deliverys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_noOfDeliverys"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Delivery Orders"
+                android:textColor="@color/white" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/dasboard_trnsparent"
+                android:layout_alignParentBottom="true">
+
+               <!-- <TextView
+                    android:id="@+id/tv_moredelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0000001A"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="More info"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_moredelivery"
+                    android:padding="3dp"
+                    android:background="@drawable/circle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_arrow_green"/>
+-->
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_dashboard2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/ll_dashboardcards"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/dasboard_total_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_totalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_total"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Total Order Val"
+                android:textColor="@color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/dasboard_trnsparent"
+                android:layout_alignParentBottom="true">
+
+              <!--  <TextView
+                    android:id="@+id/tv_moreTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0000001A"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="More info"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_moreTotal"
+                    android:padding="3dp"
+                    android:background="@drawable/circle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_arrow_yellow"/>
+-->
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/dasboard_cancled_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_noOfCancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_Cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_noOfCancle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Canceled Orders"
+                android:textColor="@color/white" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/dasboard_trnsparent"
+                android:layout_alignParentBottom="true">
+
+             <!--   <TextView
+                    android:id="@+id/tv_moreCancled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0000001A"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="More info"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_moreCancled"
+                    android:padding="3dp"
+                    android:background="@drawable/circle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_arrow_red"/>
+-->
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/ll_dashboard2"
+        android:layout_marginRight="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:text="@string/sales_text"
+                android:textColor="#212529"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="View Report"
+                android:textColor="#007BFF"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+    <TextView
+        android:id="@+id/tv_copywrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#869099"
+        android:text="@string/copy_write"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_offceName"
+            android:layout_toRightOf="@+id/tv_copywrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#007BFF"
+            android:text="CODEBELE"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_dot"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/tv_offceName"
+            android:layout_height="wrap_content"
+            android:textColor="#869099"
+            android:text="."
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_allWrite"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/tv_dot"
+            android:layout_height="wrap_content"
+            android:textColor="#869099"
+            android:text="All rights reserved."
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+</RelativeLayout>
