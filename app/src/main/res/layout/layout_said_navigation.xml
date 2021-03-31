@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#212529">
+
+    <RelativeLayout
+        android:id="@+id/rr_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_logo_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="1dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/admin_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store Front"
+            android:layout_toRightOf="@id/iv_logo_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f8f9fa"
+        android:layout_below="@+id/rr_logo"/>
+
+    <RelativeLayout
+        android:id="@+id/rr_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/line"
+        android:layout_marginTop="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/admin_logo"/>
+
+        <TextView
+            android:id="@+id/tv_hotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KAUSHIK CHATS"
+            android:layout_toRightOf="@id/iv_profile_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f8f9fa"
+        android:layout_below="@+id/rr_profile"/>
+
+<!--
+    <RelativeLayout
+        android:id="@+id/rr_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_dashboard_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/admin_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:layout_toRightOf="@id/iv_dashboard_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+-->
+
+<!--
+    <RelativeLayout
+        android:id="@+id/rr_myStores"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/rr_dashboard"
+        android:layout_marginTop="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_myStores_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/admin_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Stores"
+            android:layout_toRightOf="@id/iv_myStores_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/rl_newOrders"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/line1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_mail_outline"
+            android:id="@+id/iv_newOrders"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_newOrders"
+            android:text="New Orders"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/rl_newOrders">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_mail_outline"
+            android:id="@+id/iv_DeliveryOrders"/>
+
+        <TextView
+            android:id="@+id/tv_outForOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_DeliveryOrders"
+            android:text="Out For Delivery Orders"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+         android:id="@+id/rr_settings"
+         android:layout_width="wrap_content"
+         android:layout_height="50dp"
+         android:layout_marginLeft="20dp"
+         android:layout_below="@id/rr_dashboard"
+         android:layout_marginTop="10dp"
+
+         >
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/iv_setting_image"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:padding="1dp"
+             android:layout_centerVertical="true"
+             android:src="@drawable/ic_baseline_settings"/>
+
+         <TextView
+             android:id="@+id/tv_sotreSettings"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Store Settings"
+             android:layout_toRightOf="@id/iv_setting_image"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="10dp"
+             android:textSize="20sp"
+             android:textColor="@color/white"/>
+
+         <ImageView
+             android:id="@+id/iv_leftNav"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/tv_sotreSettings"
+             android:src="@drawable/ic_baseline_navigate"
+             android:layout_centerVertical="true"
+             android:visibility="visible"
+             android:layout_marginLeft="10dp"/>
+         <ImageView
+             android:id="@+id/iv_DownNav"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/tv_sotreSettings"
+             android:src="@drawable/ic_baseline_expand"
+             android:layout_centerVertical="true"
+             android:visibility="gone"
+             android:layout_marginLeft="10dp"/>
+
+
+     </RelativeLayout>
+ -->
+<!--
+    <com.example.aahara_restaurant.Utils.ExpandableLayout
+        android:id="@+id/expandable_layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_settings"
+        android:layout_alignParentRight="true"
+        app:el_expanded="false"
+        tools:ignore="MissingClass">
+
+        <RelativeLayout
+            android:id="@+id/rr_mystore"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_myStore"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_myStore"
+                android:text="My Store"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/rr_mystore"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_ChangePassword"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_ChangePassword"
+                android:text="My Store"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </com.example.aahara_restaurant.Utils.ExpandableLayout>
+-->
+
+
+<!--
+        <TextView
+            android:id="@+id/tv_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/expandable_layout_settings"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+-->
+
+<!--
+<RelativeLayout
+    android:id="@+id/rl_newOrders"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginLeft="20dp"
+    android:layout_below="@+id/tv_store">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_baseline_mail_outline"
+        android:id="@+id/iv_newOrders"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_newOrders"
+        android:text="New Orders"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/rl_newOrders">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_mail_outline"
+            android:id="@+id/iv_DeliveryOrders"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_DeliveryOrders"
+            android:text="Out For Delivery Orders"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr_newOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/rl_delivery"
+        android:layout_marginTop="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_Orders_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baselineorders"/>
+
+        <TextView
+            android:id="@+id/tv_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders"
+            android:layout_toRightOf="@id/iv_Orders_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/iv_leftNavOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_Orders"
+            android:src="@drawable/ic_baseline_navigate"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:id="@+id/iv_DownNavOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_Orders"
+            android:src="@drawable/ic_baseline_expand"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+    <com.example.aahara_restaurant.Utils.ExpandableLayout
+        android:id="@+id/expandable_layout_Orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_newOrders"
+        android:layout_alignParentRight="true"
+        app:el_expanded="false"
+        tools:ignore="MissingClass">
+
+        <RelativeLayout
+            android:id="@+id/rr_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_Oreders"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_Oreders"
+                android:text="Order History"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/rr_Orders"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_OrdesSettlements"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_OrdesSettlements"
+                android:text="Settlements"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </com.example.aahara_restaurant.Utils.ExpandableLayout>
+
+    <TextView
+        android:id="@+id/tv_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ITEMS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/expandable_layout_Orders"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rr_items"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_items"
+        android:layout_marginTop="10dp"
+
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_items_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baselineorders"/>
+
+        <TextView
+            android:id="@+id/tv_manageItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Items"
+            android:layout_toRightOf="@id/iv_items_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/iv_leftNavmanage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_manageItems"
+            android:src="@drawable/ic_baseline_navigate"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:id="@+id/iv_DownNavmanage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_manageItems"
+            android:src="@drawable/ic_baseline_expand"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"/>
+
+
+    </RelativeLayout>
+
+    <com.example.aahara_restaurant.Utils.ExpandableLayout
+        android:id="@+id/expandable_layout_ManageItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_items"
+        android:layout_alignParentRight="true"
+        app:el_expanded="false"
+        tools:ignore="MissingClass">
+
+        <RelativeLayout
+            android:id="@+id/rr_Manages"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_AddItems"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_AddItems"
+                android:text="Add Items"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/rr_Manages"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/iv_ViewItem"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_circle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_ViewItem"
+                android:text="View Items"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </com.example.aahara_restaurant.Utils.ExpandableLayout>
+    <TextView
+        android:id="@+id/tv_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REPORTS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/expandable_layout_ManageItems"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_financial"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tv_report">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_file"
+            android:id="@+id/iv_financial"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_financial"
+            android:text="Financial"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+-->
+    <RelativeLayout
+        android:id="@+id/rl_Logout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rl_delivery">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_logout"
+            android:id="@+id/iv_logout"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_logout"
+            android:text="Logout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

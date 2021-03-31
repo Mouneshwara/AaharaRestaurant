@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="results_assessment" >
+        <item name="android:textSize">@dimen/primaryFont</item>
+        <item name="android:textColor">@color/results_assessment</item>
+    </style>
+    <style name="StudentProfileLabelName">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+    <style name="StudentProfileLabelsText">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="AppTheme.PopupOverlay"
+        tools:ignore="ResourceCycle">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#999999</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="AppTheme.PopupOverlay"
+        tools:ignore="ResourceCycle">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#999999</item>
+    </style>
+
+</resources>

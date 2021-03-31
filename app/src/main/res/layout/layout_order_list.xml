@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/order_bg"
+    android:layout_height="300dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/admin_logo"
+                android:padding="5dp"
+                android:id="@+id/iv_logo"/>
+            <TextView
+                android:id="@+id/tv_hotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel Bala Regency"
+                android:layout_toRightOf="@id/iv_logo"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bellary Locality,Bellary"
+                android:layout_below="@id/tv_hotelName"
+                android:layout_toRightOf="@id/iv_logo"
+                android:textSize="12sp"
+                android:padding="2dp"
+                />
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$335"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_logo"
+                android:background="#ced4da"/>
+
+            <TextView
+                android:id="@+id/tv_delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivered"
+                android:textColor="#3ac54c"
+                android:layout_below="@id/line"
+                android:background="@drawable/delivered_bg"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+<!--
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_below="@+id/line"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp">
+
+                <Spinner
+                    android:id="@+id/amountSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/email_bg"
+                    style="@android:style/Widget.Holo.Light.Spinner"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_drop_down" />
+            </RelativeLayout>
+-->
+
+
+            <TextView
+                android:id="@+id/tv_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Items"
+                android:textColor="#8f8f8f"
+                android:layout_below="@id/tv_delivered"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_item"
+                android:layout_below="@+id/tv_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            <!--    <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 x "
+                    android:padding="5dp"
+                    android:textColor="@color/black"/>-->
+
+                <TextView
+                    android:id="@+id/tv_ordresName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Special Chicken Biryani"
+                    android:padding="2dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_orderOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ORDERED ON"
+                android:textColor="#8f8f8f"
+                android:layout_below="@id/rl_item"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="March 16,2021 at 9:30"
+                android:layout_below="@+id/tv_orderOn"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f0f0f0"
+                android:layout_alignParentBottom="true">
+               <!-- <TextView
+                    android:id="@+id/tv_rateOfOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat Order"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ff5c2a"/>
+-->
+
+             <!--   <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_replay"
+                    android:layout_toLeftOf="@id/tv_reptedOrder"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"/>-->
+
+
+               <!-- <TextView
+                    android:id="@+id/tv_reptedOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat Order"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ff5c2a"/>-->
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+

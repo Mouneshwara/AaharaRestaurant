@@ -1,0 +1,59 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="primaryFont">14sp</dimen>
+    <dimen name="primaryFontLarge">16sp</dimen>
+    <dimen name="primaryFontXlarge">16sp</dimen>
+    <dimen name="homeDateFont">16sp</dimen>
+    <dimen name="homeDateFontLarge">16sp</dimen>
+    <dimen name="homeDateFontXlarge">18sp</dimen>
+    <dimen name="homeWeekNameFont">12sp</dimen>
+    <dimen name="homeWeekNameFontLarge">14sp</dimen>
+    <dimen name="homeWeekNameFontXlarge">14sp</dimen>
+    <dimen name="homeRemiderTitleFont">14sp</dimen>
+    <dimen name="homeRemiderTitleFontLarge">16sp</dimen>
+    <dimen name="homeRemiderTitleFontXlarge">18sp</dimen>
+    <dimen name="homeHeaderTitleFont">14sp</dimen>
+    <dimen name="homeHeaderTitleFontLarge">16sp</dimen>
+    <dimen name="homeHeaderTitleFontXlarge">18sp</dimen>
+    <dimen name="studentDetailsFont">12sp</dimen>
+    <dimen name="homeAmountFont">16sp</dimen>
+    <dimen name="PopUpViewTitleFont">16sp</dimen>
+    <dimen name="homeAnnoncementDateFont">14sp</dimen>
+    <dimen name="homeViewlistAndScheduleFont">12sp</dimen>
+    <dimen name="homeViewlistAndScheduleFontLarge">14sp</dimen>
+    <dimen name="homeViewlistAndScheduleFontXlarge">16sp</dimen>
+    <dimen name="homeHeaderDateFont">12sp</dimen>
+    <dimen name="ProfileNameFont">16sp</dimen>
+    <dimen name="otpTitleFont">14sp</dimen>
+    <dimen name="otpTitleFontLarge">16sp</dimen>
+    <dimen name="otpTitleFontXlarge">18sp</dimen>
+    <dimen name="emailAnsphoneTitleFont">14sp</dimen>
+    <dimen name="attendanceCountLabelFont">26sp</dimen>
+    <dimen name="attendanceCountLabelFontLarge">28sp</dimen>
+    <dimen name="attendanceCountLabelFontXlarge">30sp</dimen>
+    <dimen name="commonNavigationBarTitleFont">16sp</dimen>
+    <dimen name="RecoverySourceTypeTitleFont">14sp</dimen>
+    <dimen name="syllabusTitleFont">14sp</dimen>
+    <dimen name="loginHeader">20sp</dimen>
+    <dimen name="loginHeaderLarge">24sp</dimen>
+    <dimen name="loginHeaderXlarge">24sp</dimen>
+    <dimen name="pin_text">18sp</dimen>
+    <dimen name="pin_textLarge">18sp</dimen>
+    <dimen name="pin_textXlarge">20sp</dimen>
+    <dimen name="inputHint">10sp</dimen>
+    <dimen name="inputHintLarge">12sp</dimen>
+    <dimen name="inputHintXlarge">14sp</dimen>
+    <dimen name="dashboardListItemHeaderPadding">15sp</dimen>
+    <dimen name="about_title">14sp</dimen>
+    <dimen name="student_tt_today">12sp</dimen>
+    <dimen name="student_tt_todayLarge">14sp</dimen>
+    <dimen name="student_tt_todayXlarge">16sp</dimen>
+    <dimen name="event_title">18sp</dimen>
+    <dimen name="event_titleLarge">20sp</dimen>
+    <dimen name="event_titleXlarge">22sp</dimen>
+    <dimen name="resources_other">18sp</dimen>
+    <dimen name="resources_otherLarge">20sp</dimen>
+    <dimen name="resources_otherXlarge">22sp</dimen>
+
+
+</resources>
