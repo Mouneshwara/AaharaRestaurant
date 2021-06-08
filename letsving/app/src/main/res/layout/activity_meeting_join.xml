@@ -1,9 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MeetingJoinActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff3e3e"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/iv_onBackPress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_backspace">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MEETING"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_joingGoogle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/googlemeet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+android:layout_marginTop="100dp"
+        />
+    <ImageView
+        android:id="@+id/iv_joingZoom"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/zoom"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        />
+    <ImageView
+        android:id="@+id/iv_joingMsmeeting"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/msteams"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        />
+    <ImageView
+    android:id="@+id/iv_joingbluejens"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/bluejens"
+    android:visibility="gone"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="100dp"
+    />
+    <ImageView
+        android:id="@+id/iv_joingWebex"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/webex"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        />
+
+    <EditText
+        android:id="@+id/et_joingID"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/iv_joingGoogle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:hint="MEETING NUMBER"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/white_bg"/>
+
+    <EditText
+        android:id="@+id/et_joingpassword"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_joingID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
+        android:hint="PASSCODE"
+        android:gravity="center"
+        android:background="@drawable/white_bg"/>
+
+
+    <Button
+        android:id="@+id/btn_joing"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_joingpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/black"
+
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        android:textSize="14sp"
+        android:hint="JOIN"
+        android:gravity="center"
+        android:background="@drawable/login_bg"/>
+
+</RelativeLayout>
+</RelativeLayout>
+
+</ScrollView>

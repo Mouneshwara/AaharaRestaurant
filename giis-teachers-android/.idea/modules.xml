@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/giis-teachers-android.iml" filepath="$PROJECT_DIR$/.idea/giis-teachers-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GiisTeacher.iml" filepath="$PROJECT_DIR$/.idea/modules/GiisTeacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GiisTeacher.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GiisTeacher.app.iml" />
     </modules>
   </component>
 </project>

@@ -47,7 +47,6 @@ public class OutForDeliveryAdapter extends RecyclerView.Adapter<OutForDeliveryAd
         {
 //            s = TextUtils.join(",", Collections.singleton());
             data.add(" "+items.get(i).getItemName());
-
         }
         List_name = data.toString().replace("[", "")
                 .replace("]", " ").replace(" , ", "  ,");

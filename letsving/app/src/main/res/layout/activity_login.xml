@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="#fff"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:gravity="center"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context=".Login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:gravity="center"
+        android:textColor="#ff3e3e"
+        android:background="@drawable/ving_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_login1"
+        android:text="@string/login"
+        android:gravity="center"
+        android:textColor="#ff3e3e"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textColorHint="@color/black"
+
+        android:hint="EMAIL ID"
+        android:gravity="center"
+        android:background="@drawable/white_bg"/>
+    <TextView
+        android:id="@+id/emailerror"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_email"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="15dp"
+        android:visibility="invisible"
+        android:text="Enter valid Email"
+        android:textColor="#fff"
+        android:textSize="12sp"
+       />
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:background="@drawable/white_bg"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="14sp"
+        android:textColorHint="@color/black"
+
+        android:textColor="@color/black"
+        android:hint="LOGIN"
+        android:gravity="center"
+        android:background="@drawable/login_bg"/>
+
+
+</RelativeLayout>
+</ScrollView>

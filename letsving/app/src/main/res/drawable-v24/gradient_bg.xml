@@ -6,5 +6,5 @@
         android:angle="45"
         android:startColor="@color/custom_radio_button_color"
         android:endColor="@color/custom_radio_button_color"/>
-    <corners android:radius="5dp"/>
+    <corners android:radius="10dp"/>
 </shape>
