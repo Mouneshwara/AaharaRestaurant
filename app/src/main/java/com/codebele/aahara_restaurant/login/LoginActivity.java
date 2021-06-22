@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                     String message = intent.getStringExtra("message");
 
-                    Toast.makeText(getApplicationContext(), "Push notification: " + message, Toast.LENGTH_LONG).show();
+                 //   Toast.makeText(getApplicationContext(), "Push notification: " + message, Toast.LENGTH_LONG).show();
 
                     // txtMessage.setText(message);
                 }

@@ -33,7 +33,10 @@ public class DashBoardFragment  extends Fragment {
     TextView tvNumberOfDelivery;
     @BindView(R.id.tv_noOfCancle)
     TextView tvNumberOfCancle;
-
+    @BindView(R.id.tv_on_the_way)
+    TextView tvpickedup;
+    @BindView(R.id.tv_placed_orders)
+    TextView tvplacedOrders;
 
     ProgressDialog loading;
     String access_token = "";
@@ -65,16 +68,13 @@ public class DashBoardFragment  extends Fragment {
                     for (int i=0;i<data.size();i++) {
                         tvNumberOfCancle.setText(String.valueOf(data.get(i).getCountCancelled()));
                         tvNumberOfDelivery.setText(String.valueOf(data.get(i).getCountDelivered()));
-
+                        tvpickedup.setText(String.valueOf(data.get(i).getCountPickedup()));
+                        tvplacedOrders.setText(String.valueOf(data.get(i).getCountPlaced()));
                     }
-
                 }else {
                     Toast.makeText(getContext(),"No data found",Toast.LENGTH_LONG).show();
-
                 }
-
             }
-
             @Override
             public void onFailure(Call<DashBoardModle> call, Throwable t) {
 

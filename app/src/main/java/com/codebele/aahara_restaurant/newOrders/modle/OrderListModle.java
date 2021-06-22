@@ -79,6 +79,10 @@ public class OrderListModle {
         @SerializedName("payment_mode")
         @Expose
         private String paymentMode;
+        @SerializedName("price")
+        @Expose
+        private String price;
+
         @SerializedName("item")
         @Expose
         private List<Item> item = null;
@@ -169,6 +173,14 @@ public class OrderListModle {
 
         public void setActualPrice(String actualPrice) {
             this.actualPrice = actualPrice;
+        }
+
+        public String getPrice() {
+            return price;
+        }
+
+        public void setPrice(String price) {
+            this.price = price;
         }
 
         public String getPaymentMode() {

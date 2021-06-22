@@ -60,7 +60,7 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.NewOrd
         holder.tvHotelName.setText(orders.getFullName());
         holder.tvOrderPlace.setText(orders.getOrderStatus());
         holder.tvLocation.setText(orders.getAddress());
-        holder.tvAmount.setText(orders.getActualPrice());
+        holder.tvAmount.setText(orders.getPrice());
         holder.tvDate.setText(orders.getCreatedDate());
         holder.tvItemsName.setText(List_name);
 //        OrderListModle.Item item= items.get(position);

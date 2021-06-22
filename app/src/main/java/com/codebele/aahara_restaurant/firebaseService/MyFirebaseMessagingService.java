@@ -1,12 +1,18 @@
 package com.codebele.aahara_restaurant.firebaseService;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.codebele.aahara_restaurant.R;
 import com.codebele.aahara_restaurant.SideNavigationActivity;
 import com.codebele.aahara_restaurant.Utils.NotificationUtils;
 import com.codebele.aahara_restaurant.app.Config;
@@ -38,13 +44,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if (remoteMessage == null)
             return;
 
-        // Check if message contains a notification payload.
+//        // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.e(TAG, "Notification Body: " + remoteMessage.getNotification().getBody());
             handleNotification(remoteMessage.getNotification().getBody());
         }
-
-        // Check if message contains a data payload.
+//
+   //      Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.e(TAG, "Data Payload: " + remoteMessage.getData().toString());
 
@@ -55,6 +61,20 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 Log.e(TAG, "Exception: " + e.getMessage());
             }
         }
+        Intent intent = new Intent(this, SideNavigationActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+        String channelId = "Default";
+        NotificationCompat.Builder builder = new  NotificationCompat.Builder(this, channelId)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(remoteMessage.getNotification().getTitle())
+                .setContentText(remoteMessage.getNotification().getBody()).setAutoCancel(true).setContentIntent(pendingIntent);;
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(channelId, "Default channel", NotificationManager.IMPORTANCE_DEFAULT);
+            manager.createNotificationChannel(channel);
+        }
+        manager.notify(0, builder.build());
     }
 
     private void handleNotification(String message) {
@@ -64,10 +84,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             pushNotification.putExtra("message", message);
             LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
 
-            // play notification sound
+      /*      // play notification sound
             NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
-            notificationUtils.playNotificationSound();
+            notificationUtils.playNotificationSound();*/
+
         }else{
+//            NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
+//            notificationUtils.playNotificationSound();
             // If the app is in background, firebase itself handles the notification
         }
     }
@@ -94,14 +117,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
             if (!NotificationUtils.isAppIsInBackground(getApplicationContext())) {
-//                // app is in foreground, broadcast the push message
-//                Intent pushNotification = new Intent(Config.PUSH_NOTIFICATION);
-//                pushNotification.putExtra("message", message);
-//                LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
+                // app is in foreground, show the notification in notification tray
+                Intent intent = new Intent(getApplicationContext(), SideNavigationActivity.class);
+                intent.putExtra("message", message);
 //
 //                // play notification sound
-//                NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
-//                notificationUtils.playNotificationSound();
+                NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
+                notificationUtils.playNotificationSound();
 
                 Intent resultIntent = new Intent(getApplicationContext(), LoginActivity.class);
                 resultIntent.putExtra("message", message);
@@ -117,6 +139,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 // app is in background, show the notification in notification tray
                 Intent resultIntent = new Intent(getApplicationContext(), SideNavigationActivity.class);
                 resultIntent.putExtra("message", message);
+
+                // play notification sound
+                NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
+                notificationUtils.playNotificationSound();
 
                 // check for image attachment
                 if (TextUtils.isEmpty(imageUrl)) {

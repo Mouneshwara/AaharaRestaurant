@@ -51,6 +51,11 @@ public class DashBoardModle {
         @SerializedName("countDelivered")
         @Expose
         private Integer countDelivered;
+        @SerializedName("countPlaced")
+        @Expose
+        private Integer countPlaced;
+
+
 
         public Integer getCountPickedup() {
             return countPickedup;
@@ -62,6 +67,14 @@ public class DashBoardModle {
 
         public Integer getCountCancelled() {
             return countCancelled;
+        }
+
+        public Integer getCountPlaced() {
+            return countPlaced;
+        }
+
+        public void setCountPlaced(Integer countPlaced) {
+            this.countPlaced = countPlaced;
         }
 
         public void setCountCancelled(Integer countCancelled) {

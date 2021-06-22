@@ -28,6 +28,8 @@ public class DashboardActivity extends AppCompatActivity {
     TextView tvNumberOfDelivery;
     @BindView(R.id.tv_noOfCancle)
     TextView tvNumberOfCancle;
+    @BindView(R.id.tv_on_the_way)
+    TextView tvpickedup;
 
 
     ProgressDialog loading;
@@ -59,6 +61,7 @@ public class DashboardActivity extends AppCompatActivity {
                     for (int i=0;i<data.size();i++) {
                         tvNumberOfCancle.setText(String.valueOf(data.get(i).getCountCancelled()));
                         tvNumberOfDelivery.setText(String.valueOf(data.get(i).getCountDelivered()));
+                        tvpickedup.setText(String.valueOf(data.get(i).getCountPickedup()));
 
                     }
 
